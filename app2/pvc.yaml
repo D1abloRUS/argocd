@@ -2,7 +2,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: sharedfs
-  namespace: test2
+  namespace: default
 spec:
   accessModes:
   - ReadWriteMany
