@@ -21,6 +21,6 @@ spec:
         helm.sh/resource-policy: keep
       labels:
         app.kubernetes.io/component: example10
-      name: example1
+      name: example10
       size: 1Gi
       storageClass: rbd-nvme
