@@ -1,0 +1,24 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: example1
+  namespace: default
+spec:
+  chart:
+    name: pvc
+    repository: https://helmhub.puzl.ee/dep
+    version: 0.1.0
+  maxHistory: 4
+  releaseName: example1
+  rollback:
+    enable: false
+  timeout: 900
+  values:
+    persistentVolumeClaim:
+      accessModes:
+      - ReadWriteOnce
+      annotations:
+        helm.sh/resource-policy: keep
+      name: example1
+      size: 1Gi
+      storageClass: rbd-nvme
