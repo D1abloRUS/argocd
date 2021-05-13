@@ -19,6 +19,8 @@ spec:
       - ReadWriteOnce
       annotations:
         helm.sh/resource-policy: keep
+      labels:
+        app.kubernetes.io/component: example1
       name: example1
       size: 1Gi
       storageClass: rbd-nvme
