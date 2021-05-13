@@ -1,7 +1,7 @@
 apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
-  name: example1
+  name: example10
   namespace: 8fc7b370-fe9a-4acf-a24d-89d8fb747c00
 spec:
   chart:
@@ -9,7 +9,7 @@ spec:
     repository: https://helmhub.puzl.ee/dep
     version: 0.1.0
   maxHistory: 4
-  releaseName: example1
+  releaseName: example10
   rollback:
     enable: false
   timeout: 900
@@ -20,7 +20,7 @@ spec:
       annotations:
         helm.sh/resource-policy: keep
       labels:
-        app.kubernetes.io/component: example1
+        app.kubernetes.io/component: example10
       name: example1
       size: 1Gi
       storageClass: rbd-nvme
