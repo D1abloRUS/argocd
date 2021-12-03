@@ -3,4 +3,4 @@ kind: Kustomization
 
 resources:
 - argocd-applications/cert-manager.yaml
-- argocd-applications/ingress-nginx.yaml
+#- argocd-applications/ingress-nginx.yaml
