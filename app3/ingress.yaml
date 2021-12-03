@@ -3,6 +3,7 @@ kind: Ingress
 metadata:
   name: app3
 spec:
+  ingressClassName: nginx
   rules:
   - host: "test-ingress.cluster-dev.puzl.ee"
     http:
