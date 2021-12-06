@@ -3617,8 +3617,11 @@ spec:
           protocol: TCP
         resources:
           requests:
-            cpu: 10m
-            memory: 150Mi
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: 1000m
+            memory: 1024Mi
       nodeSelector:
         kubernetes.io/os: linux
       securityContext:
