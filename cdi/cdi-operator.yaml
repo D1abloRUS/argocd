@@ -3622,14 +3622,9 @@ spec:
           limits:
             cpu: 1000m
             memory: 1024Mi
-      nodeSelector:
-        kubernetes.io/os: linux
       securityContext:
         runAsNonRoot: true
       serviceAccountName: cdi-operator
-      tolerations:
-      - key: CriticalAddonsOnly
-        operator: Exists
 ---
 apiVersion: v1
 kind: ConfigMap
