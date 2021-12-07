@@ -17092,7 +17092,12 @@ spec:
               fieldRef:
                 fieldPath: metadata.namespace
           resources:
-            {}
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 1000m
+              memory: 1024Mi
 ---
 # Source: cert-manager/templates/deployment.yaml
 apiVersion: apps/v1
@@ -17146,7 +17151,12 @@ spec:
               fieldRef:
                 fieldPath: metadata.namespace
           resources:
-            {}
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 1000m
+              memory: 1024Mi
 ---
 # Source: cert-manager/templates/webhook-deployment.yaml
 apiVersion: apps/v1
@@ -17219,7 +17229,12 @@ spec:
               fieldRef:
                 fieldPath: metadata.namespace
           resources:
-            {}
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 1000m
+              memory: 1024Mi
 ---
 # Source: cert-manager/templates/webhook-mutating-webhook.yaml
 apiVersion: admissionregistration.k8s.io/v1
